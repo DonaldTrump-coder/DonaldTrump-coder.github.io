@@ -57,9 +57,9 @@ footer {
     text-align:center;
 }
 
-main img {
+#main img {
     position: relative;
-    margin-left: -200px; /* 让图片向左移动 20px */
+    margin-left: -380px; /* 让图片向左移动 20px */
 }
 
 h1 {
