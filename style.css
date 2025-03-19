@@ -51,3 +51,13 @@ footer {
     background-color: #333;
     color: #fff;
 }
+/*主页证件照图像模块*/
+#mainpik
+{
+    text-align:center;
+}
+
+#mainpik img {
+    position: relative;
+    left: -200px; /* 让图片向左移动 20px */
+}
