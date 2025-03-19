@@ -57,7 +57,33 @@ footer {
     text-align:center;
 }
 
-#mainpik img {
+mainpik img {
     position: relative;
-    left: -200px; /* »√Õº∆¨œÚ◊Û“∆∂Ø 20px */
+    margin-left: -200px; /* »√Õº∆¨œÚ◊Û“∆∂Ø 20px */
+}
+
+h1 {
+    margin-top: -320px;
+    margin-left: 120px;
+    font-size:70px;
+    letter-spacing:10px;
+}
+
+.English-name {
+    color: grey;
+    margin-left: 55px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.custom1-h2 {
+    text-align: left;
+    margin-left: 700px;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.custom2-h2 {
+    margin-left: 300px;
+    font-size: 30px;
 }
