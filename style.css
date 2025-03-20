@@ -105,3 +105,12 @@ h1 {
     font-family: SimSun;
     font-size: 25px;
 }
+
+.vertical-line1 {
+    transform: rotate(90);
+    height: 100px;
+    width:2px;
+    position:absolute;
+    top:400px;
+    left:800px;
+}
