@@ -125,3 +125,30 @@ h1 {
     font-family: STSong;
     font-size:20px;
 }
+
+.awards {
+    text-align: center;
+    font-family: STSong;
+    font-size: 20px;
+}
+
+.academic {
+    text-align: center;
+    font-family: STSong;
+    font-size: 20px;
+}
+
+a:link {
+    color: #ff2406
+}
+/* 未访问的链接 */
+
+a:visited {
+    color: #ff2406
+}
+/* 已访问的链接 */
+
+a:hover {
+    color: #808080
+}
+/* 当有鼠标悬停在链接上 */
