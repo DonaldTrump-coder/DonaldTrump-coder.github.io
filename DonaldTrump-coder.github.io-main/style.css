@@ -1,0 +1,154 @@
+/* 重置一些默认的样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+section {
+    text-align:center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+/*主页证件照图像模块*/
+#main
+{
+    text-align:center;
+}
+
+    #main img {
+        position: relative;
+        left:-200px;
+    }
+
+h1 {
+    position: relative;
+    font-size: 70px;
+    letter-spacing: 10px;
+    font-family: SimHei;
+    left:50px;
+    top:-320px;
+}
+
+.English-name {
+    position: relative;
+    color: grey;
+    font-size: 20px;
+    top:-500px;
+    left:50px;
+}
+
+.custom1-h2 {
+    position:relative;
+    text-align: left;
+    font-size: 40px;
+    top:-485px;
+    left:680px;
+}
+
+.custom2-h2 {
+    position: relative;
+    font-size: 30px;
+    top: -485px;
+    left: 152px;
+}
+
+.link-icons {
+    position: relative;
+    text-align: left;
+    top:-275px;
+    left:415px;
+}
+
+.contact-way {
+    position: relative;
+    text-align: left;
+    font-family: SimSun;
+    font-size: 25px;
+    top:-260px;
+    left:250px;
+}
+
+.vertical-line1 {
+    transform: rotate(90);
+    height: 100px;
+    width:2px;
+    position:absolute;
+    top:400px;
+    left:800px;
+}
+
+.social-work {
+    text-align: center;
+    font-family: STSong;
+    font-size:20px;
+}
+
+.awards {
+    text-align: center;
+    font-family: STSong;
+    font-size: 20px;
+}
+
+.academic {
+    text-align: center;
+    font-family: STSong;
+    font-size: 20px;
+}
+
+a:link {
+    color: #ff2406
+}
+/* 未访问的链接 */
+
+a:visited {
+    color: #ff2406
+}
+/* 已访问的链接 */
+
+a:hover {
+    color: #808080
+}
+/* 当有鼠标悬停在链接上 */
