@@ -19,6 +19,15 @@ header {
     text-align: center;
 }
 
+a {
+    display: inline; /* 或者 inline-block，取决于您的需求 */
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none; /* 如果您不希望链接有下划线 */
+    box-sizing: border-box;
+  }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -55,60 +64,103 @@ footer {
 /*主页证件照图像模块*/
 #main
 {
-    text-align:center;
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /* 水平居中子元素 */
+    align-items: flex-end; /* 垂直居中子元素 */
+    gap: 40px;
 }
 
-    #main img {
-        position: relative;
-        left:-200px;
-    }
+#main img 
+{
+    position: relative;
+    text-align: center;
+    left:0px;
+}
+
+#education-research {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 水平居中子元素 */
+    align-items: flex-start; /* 垂直居中子元素 */
+    gap: 90px;
+}
+
+img {
+    display: block; /* 使图像成为块级元素 */
+    width: 100%; /* 使图像宽度填充其父元素 */
+    height: auto; /* 保持图像的原始宽高比 */
+    border: 0; /* 移除图像边框 */
+}
+
+a img {
+    width: 100%; /* 图片宽度与链接宽度一致 */
+    height: auto; /* 保持宽高比 */
+}
 
 h1 {
     position: relative;
+    text-align: left;
     font-size: 70px;
     letter-spacing: 10px;
     font-family: SimHei;
-    left:50px;
-    top:-320px;
+    left:0px;
+    top:0px;
 }
 
 .English-name {
     position: relative;
+    text-align: left;
     color: grey;
     font-size: 20px;
-    top:-500px;
-    left:50px;
+    top:-10px;
+    left:0px;
 }
 
 .custom1-h2 {
     position:relative;
     text-align: left;
     font-size: 40px;
-    top:-485px;
-    left:680px;
+    top:0px;
+    left:0px;
 }
 
 .custom2-h2 {
     position: relative;
     font-size: 30px;
-    top: -485px;
-    left: 152px;
+    top: 0px;
+    left: 0px;
 }
 
-.link-icons {
-    position: relative;
-    text-align: left;
-    top:-275px;
-    left:415px;
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .contact-way {
-    position: relative;
-    text-align: left;
     font-family: SimSun;
     font-size: 25px;
-    top:-260px;
-    left:250px;
+    top:0px;
+    left:0px;
+    font-weight: bold
+}
+
+.link-icons {
+    top:0px;
+    left:0px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.phone-and-mail {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
 }
 
 .vertical-line1 {
@@ -116,8 +168,22 @@ h1 {
     height: 100px;
     width:2px;
     position:absolute;
-    top:400px;
-    left:800px;
+    top:200px;
+    left:0px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.research {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .social-work {
