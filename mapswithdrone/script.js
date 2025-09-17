@@ -22,13 +22,14 @@ function updateImages() {
 
 // 切换到上一张
 function prevImage() {
-  index = (index - 1 + images.length) % images.length;
+  index = (index + 1) % images.length;
   updateImages();
 }
 
 // 切换到下一张
 function nextImage() {
-  index = (index + 1) % images.length;
+  
+  index = (index - 1 + images.length) % images.length;
   updateImages();
 }
 
