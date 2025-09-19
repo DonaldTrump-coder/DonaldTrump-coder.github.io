@@ -1,15 +1,21 @@
 const images = document.querySelectorAll('.carousel img');
 const current = document.getElementById('current');
+const texts = document.querySelectorAll(".text-item");
 let index = 0;
 
-// 更新所有图片的状态
+// 更新所有图片和文字的状态
 function updateImages() {
-  // 清除所有 class
+  // 清除所有图片 class
   images.forEach(img => img.classList.remove('active', 'prev', 'next'));
+  // 清除所有文字 class
+  texts.forEach(txt => txt.classList.remove('active'));
 
   // 当前图
   images[index].classList.add('active');
   current.src = images[index].src;
+
+  // 当前文字
+  texts[index].classList.add('active');
 
   // 左边图
   const prevIndex = (index - 1 + images.length) % images.length;
@@ -28,7 +34,6 @@ function prevImage() {
 
 // 切换到下一张
 function nextImage() {
-  
   index = (index - 1 + images.length) % images.length;
   updateImages();
 }

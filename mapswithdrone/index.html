@@ -110,8 +110,20 @@
     .arrow.left { left: 10px; }
     .arrow.right { right: 10px; }
 
+    .current-text {
+      grid-column: 1;     /* 放在左边 */
+      padding-left: 40px; /* 离边有点间距 */
+      text-align: left;
+      font-size: 1.0em;
+      line-height: 1.6;
+      color: #f0f0f0;
+      max-width: 20em;
+    }
+
     .current-image {
-      margin-top: 25px;
+      text-align: center;
+      grid-column: 2;
+      flex: 0 0 auto;
     }
 
     .current-image img {
@@ -121,6 +133,9 @@
       border-radius: 12px; /* 圆角稍微大一点 */
       box-shadow: 0 6px 20px rgba(0,0,0,0.6);
     }
+
+    .text-item { display: none; }
+    .text-item.active { display: block; }
   </style>
 </head>
 <body>
@@ -167,9 +182,46 @@
     <button class="arrow right" onclick="nextImage()">&#10095;</button>
   </div>
 
+  <div style="display: grid;
+              grid-template-columns: 300px 1fr 300px;
+              align-items: center;
+              max-width: 100%;
+              margin: 40px auto;
+              margin-top: 0em;
+              margin-bottom: 0em;">
+    <div class="current-text" id="currenttext">
+      <div class="text-item active">
+        <p>本图以三维方式呈现了粤港澳大湾区整体的低空经济发展现状，基于卫星影像和DEM高程栅格整合了产业信息、低空航线以及知名建筑模型等。本作品为
+          <a href="https://www.csgpc.org/detail/25126.html" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第二届“星湖杯”地图设计大赛
+          </a>
+          的决赛参赛作品。</p>
+      </div>
+      <div class="text-item">
+      <h3>大湾区总览</h3>
+      <p>This map shows the Guangdong-Hong Kong-Macao Greater Bay Area.</p>
+    </div>
+    <div class="text-item">
+      <h3>广州产业分布</h3>
+      <p>This map describes the UAV industry in Guangzhou.</p>
+    </div>
+    <div class="text-item">
+      <h3>深圳产业发展</h3>
+      <p>This map highlights Shenzhen's innovation in low-altitude economy.</p>
+    </div>
+    <div class="text-item">
+      <h3>珠海航空特色</h3>
+      <p>This map introduces Zhuhai as an aviation hub.</p>
+    </div>
+    <div class="text-item">
+      <h3>香港和澳门区域</h3>
+      <p>This map focuses on Hong Kong and Macao.</p>
+    </div>
+    </div>
   <!-- 当前图片 -->
   <div class="current-image">
     <img id="current" src="images/星湖杯.png" alt="当前地图">
+  </div>
   </div>
 
   <div style="border: 2px solid #3c3c3c;
