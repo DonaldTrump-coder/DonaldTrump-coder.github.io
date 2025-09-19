@@ -112,7 +112,7 @@
 
     .current-text {
       grid-column: 1;     /* 放在左边 */
-      padding-left: 40px; /* 离边有点间距 */
+      padding-left: 8em; /* 离边有点间距 */
       text-align: left;
       font-size: 1.0em;
       line-height: 1.6;
@@ -134,8 +134,31 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.6);
     }
 
-    .text-item { display: none; }
-    .text-item.active { display: block; }
+    .text-item {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .text-item.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .text-item.fade-out {
+      display: block;                        /* 关键：保持显示状态 */
+      animation: fadeOut 0.5s ease forwards; /* 慢慢消失 */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+
   </style>
 </head>
 <body>
@@ -183,10 +206,10 @@
   </div>
 
   <div style="display: grid;
-              grid-template-columns: 300px 1fr 300px;
+              grid-template-columns: 22em 1fr 22em;
               align-items: center;
               max-width: 100%;
-              margin: 40px auto;
+              margin: auto;
               margin-top: 0em;
               margin-bottom: 0em;">
     <div class="current-text" id="currenttext">
@@ -198,24 +221,39 @@
           的决赛参赛作品。</p>
       </div>
       <div class="text-item">
-      <h3>大湾区总览</h3>
-      <p>This map shows the Guangdong-Hong Kong-Macao Greater Bay Area.</p>
+      <p>本图综合呈现了大湾区低空经济产业的经济发展活力和资源分布。本作品为
+          <a href="http://www.giscontest.com/cn/list-110.aspx" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第23届SuperMap杯高校GIS大赛
+          </a>
+          的参赛作品之一。</p>
     </div>
     <div class="text-item">
-      <h3>广州产业分布</h3>
-      <p>This map describes the UAV industry in Guangzhou.</p>
+      <p>本图展现了广州市各行政区的低空经济产业相关特色，重点关注其在低空制造业方面的分布和优势。本作品为
+          <a href="http://www.giscontest.com/cn/list-110.aspx" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第23届SuperMap杯高校GIS大赛
+          </a>
+          的参赛作品之一。</p>
     </div>
     <div class="text-item">
-      <h3>深圳产业发展</h3>
-      <p>This map highlights Shenzhen's innovation in low-altitude economy.</p>
+      <p>本图重点关注深圳市低空经济产业的经济发展成果，包括了其产业规模区位差异以及未来发展趋势。本作品为
+          <a href="http://www.giscontest.com/cn/list-110.aspx" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第23届SuperMap杯高校GIS大赛
+          </a>
+          的参赛作品之一。</p>
     </div>
     <div class="text-item">
-      <h3>珠海航空特色</h3>
-      <p>This map introduces Zhuhai as an aviation hub.</p>
+      <p>本图呈现了珠海市低空经济产业的发展现状，包括了重点的会展成果、低空航线等，重点关注其在大型低空飞行器方面的广泛应用。本作品为
+          <a href="http://www.giscontest.com/cn/list-110.aspx" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第23届SuperMap杯高校GIS大赛
+          </a>
+          的参赛作品之一。</p>
     </div>
     <div class="text-item">
-      <h3>香港和澳门区域</h3>
-      <p>This map focuses on Hong Kong and Macao.</p>
+      <p>本图主要展示了香港地区的旅游景点、高校对于其低空经济发展的重要推动作用，叙述了其低空经济发展概况。本作品为
+          <a href="http://www.giscontest.com/cn/list-110.aspx" style="color: white;text-decoration: none; font-weight: bold;" target="_blank">
+          第23届SuperMap杯高校GIS大赛
+          </a>
+          的参赛作品之一。</p>
     </div>
     </div>
   <!-- 当前图片 -->

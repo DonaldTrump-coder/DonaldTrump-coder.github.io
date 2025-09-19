@@ -7,21 +7,38 @@ let index = 0;
 function updateImages() {
   // 清除所有图片 class
   images.forEach(img => img.classList.remove('active', 'prev', 'next'));
-  // 清除所有文字 class
-  texts.forEach(txt => txt.classList.remove('active'));
 
-  // 当前图
+  // 当前图片
   images[index].classList.add('active');
   current.src = images[index].src;
 
-  // 当前文字
-  texts[index].classList.add('active');
+  // ---------- 文字淡出 → 再淡入 ----------
+  const activeText = document.querySelector(".text-item.active");
 
-  // 左边图
+  if (activeText) {
+    // 旧文字执行淡出
+    activeText.classList.remove("active");
+    activeText.classList.add("fade-out");
+
+    activeText.addEventListener("animationend", () => {
+      // 淡出完成后隐藏
+      activeText.classList.remove("fade-out");
+      activeText.style.display = "none";
+
+      // 新文字显示并淡入
+      texts[index].style.display = "block";
+      texts[index].classList.add("active");
+    }, { once: true });
+  } else {
+    // 第一次直接显示
+    texts[index].style.display = "block";
+    texts[index].classList.add("active");
+  }
+
+  // ---------- 左右预览图 ----------
   const prevIndex = (index - 1 + images.length) % images.length;
   images[prevIndex].classList.add('prev');
 
-  // 右边图
   const nextIndex = (index + 1) % images.length;
   images[nextIndex].classList.add('next');
 }
