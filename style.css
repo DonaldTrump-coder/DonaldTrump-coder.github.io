@@ -101,9 +101,9 @@ a img {
 h1 {
     position: relative;
     text-align: left;
-    font-size: 70px;
-    letter-spacing: 10px;
-    font-family: SimHei;
+    font-size: 53px;
+    letter-spacing: 1px;
+    font-family: Helvetica, Arial, sans-serif;
     left:0px;
     top:0px;
 }
@@ -111,16 +111,18 @@ h1 {
 .custom1-h2 {
     position:relative;
     text-align: left;
-    font-size: 40px;
-    top:0px;
+    font-size: 30px;
+    top:-1vh;
     left:0px;
 }
 
 .custom2-h2 {
     position: relative;
-    font-size: 30px;
-    top: 0px;
+    font-size: 3vh;
+    top: -1vh;
     left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
 }
 
 .contacts {
