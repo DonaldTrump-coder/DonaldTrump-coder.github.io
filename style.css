@@ -392,34 +392,20 @@ a:hover {
     background-color: #e6f6ff;
 }
 
-.section-block {
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.edu-icon img {
+  width: 8rem;
+}
+
+.edu-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.section-title {
-  font-family: "STSong", serif;
-  font-size: 24px;
-}
-
-.edu-cn {
-  font-family: "SimSun", serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.edu-en {
-  font-family: "Consolas", monospace;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.research-text {
-  font-family: "SimSun", serif;
-  font-size: 20px;
-  text-align: center;
-  line-height: 1.6;
+  gap: 8px;
 }
