@@ -203,12 +203,11 @@ a:hover {
 .hero-container {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
-    max-width: 62.5rem;
+    gap: 1.5rem;
     margin: 0 auto;
     padding: 0;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .visitor-map {
@@ -227,7 +226,6 @@ a:hover {
 }
 
 .hero-left {
-    max-width: 37.5rem;
     margin: 0;
     padding: 0;
 }
