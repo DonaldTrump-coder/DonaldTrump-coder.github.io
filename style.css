@@ -409,3 +409,10 @@ a:hover {
   flex-direction: column;
   gap: 8px;
 }
+
+.schoolname {
+    font-weight: 900;
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+    font-size: 1.3em;
+}

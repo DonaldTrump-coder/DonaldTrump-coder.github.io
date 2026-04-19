@@ -2,7 +2,9 @@ const audio = document.getElementById('music');
 if (!audio) return;
 
 audio.muted = true;
-audio.play().catch(() => {});
+audio.play().catch(err => {
+    console.log("autoplay blocked:", err);
+});
 
 let unlocked = false;
 
@@ -11,10 +13,13 @@ const unlockAudio = () => {
     unlocked = true;
 
     audio.muted = false;
-    audio.play().catch(() => {});
-    console.log("Music unmuted!");
-};
+    audio.volume = 1;
 
-document.addEventListener('click', unlockAudio);
-document.addEventListener('keydown', unlockAudio);
-document.addEventListener('scroll', unlockAudio);
+    audio.play().catch(err => {
+        console.log("unlock play failed:", err);
+    });
+
+    console.log("Music UNLOCKED!");
+};
+document.addEventListener('click', unlockAudio, { once: true });
+document.addEventListener('keydown', unlockAudio, { once: true });
