@@ -212,6 +212,21 @@ a:hover {
     margin: 0 auto;
 }
 
+.visitor-map {
+    opacity: 0.7;
+}
+
+.map-title {
+    text-align: center;
+    margin-top: 0.3rem;
+    font-size: 1.7rem;
+    color: #581bc9;
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    -webkit-text-stroke: 1.0px #ffffff;
+    font-style: italic;
+}
+
 .hero-left {
     max-width: 37.5rem;
 }
