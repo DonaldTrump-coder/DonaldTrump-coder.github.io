@@ -184,8 +184,23 @@ a:hover {
     top: 0;
     z-index: 1000;
     background: white;
-    border-bottom: 1px solid #eee;
     padding: 20px 30px;
+    border: 3px dashed blue;
+    border-radius: 20px;
+    background-clip: padding-box;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.82)),
+        url("images/sticky_bg.png") center/cover no-repeat;
+
+    z-index: -1;
+    border-radius: inherit;
 }
 
 .hero-container {
@@ -204,7 +219,7 @@ a:hover {
 .hero-left h1 {
     position: relative;
     text-align: center;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     letter-spacing: 0.5px;
     font-family: Helvetica, Arial, sans-serif;
     left:0px;
@@ -212,23 +227,24 @@ a:hover {
 }
 
 .nickname {
-    color: gray;
-    font-size: 1.375rem;
-    margin: 0.3rem 0 1rem;
+    color: rgb(82, 82, 82);
+    font-size: 0.975rem;
+    margin: 0.05rem 0 0.15rem;
 }
 
 .school {
-    font-size: 1.175rem;
-    line-height: 1.5;
+    font-size: 1.075rem;
+    line-height: 1.3;
+    font-weight: 600;
 }
 
 .major {
-    margin-top: 0.6rem;
+    margin-top: 0.1rem;
     font-weight: 500;
 }
 
 .icons {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,8 +292,8 @@ a:hover {
 }
 
 .contact p {
-    margin: 0.3rem 0;
-    color: #555;
+    margin: 0.1rem 0;
+    color: #101010;
     font-size: 1rem;
 }
 
