@@ -91,14 +91,6 @@ footer {
     left:0px;
 }
 
-#education-research {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* ˮƽ������Ԫ�� */
-    align-items: flex-start; /* ��ֱ������Ԫ�� */
-    gap: 160px;
-}
-
 img {
     display: block; /* ʹͼ���Ϊ�鼶Ԫ�� */
     width: 100%; /* ʹͼ���������丸Ԫ�� */
@@ -385,4 +377,49 @@ a:hover {
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 2px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed rgb(116, 190, 251);
+    border-radius: 20px;
+    background-color: #e6f6ff;
+}
+
+.section-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title {
+  font-family: "STSong", serif;
+  font-size: 24px;
+}
+
+.edu-cn {
+  font-family: "SimSun", serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.edu-en {
+  font-family: "Consolas", monospace;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.research-text {
+  font-family: "SimSun", serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.6;
 }
