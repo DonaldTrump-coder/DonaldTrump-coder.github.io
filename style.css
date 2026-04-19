@@ -313,3 +313,61 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     margin: 0;
 }
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed rgb(116, 190, 251);
+    border-radius: 20px;
+}
+
+/* Title Styling */
+.title {
+    font-family: Consolas, monospace;
+    font-size: 1.6em;
+    margin-bottom: -1.5em;
+    color: #333; /* Optional: Change title color */
+}
+
+/* Paragraph Styling */
+.description {
+    max-width: 45em;
+    text-align: left;
+    font-size: 1em;
+    color: #333; /* Optional: Color for description */
+}
+
+/* Styling for Links */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.highlight:hover {
+    background-color: #ffd700; /* Change background on hover */
+    color: #333; /* Optional: Change text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .introduction {
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .description {
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+}

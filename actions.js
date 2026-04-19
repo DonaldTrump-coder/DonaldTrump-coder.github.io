@@ -6,11 +6,7 @@ window.addEventListener('DOMContentLoaded', function () {
     audio.play().catch(() => {
         const startMusic = () => {
             audio.muted = false;
-            audio.play().then(() => {
-                console.log("Music started!");
-            }).catch((err) => {
-                console.log("Error playing music:", err);
-            });
+            audio.play();
 
             document.removeEventListener('click', startMusic);
             document.removeEventListener('keydown', startMusic);
@@ -19,6 +15,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
         document.addEventListener('click', startMusic);
         document.addEventListener('keydown', startMusic);
-        document.addEventListener('scroll', startMusic);
+        document.removeEventListener('scroll', startMusic);
     });
 });
