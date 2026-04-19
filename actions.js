@@ -1,5 +1,4 @@
 const audio = document.getElementById('music');
-if (!audio) return;
 
 audio.muted = true;
 audio.play().catch(err => {
