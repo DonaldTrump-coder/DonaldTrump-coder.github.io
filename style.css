@@ -373,8 +373,15 @@ a:hover {
 }
 
 .research {
-    font-size: 1.0em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #1a73e8;
     font-style: italic;
+    text-decoration: none;
+}
+
+.research:hover {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 2px;
 }
