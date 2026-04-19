@@ -324,6 +324,7 @@ a:hover {
     text-align: center;
     border: 2px dashed rgb(116, 190, 251);
     border-radius: 20px;
+    background-color: #e6f6ff;
 }
 
 /* Title Styling */

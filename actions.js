@@ -6,14 +6,13 @@ window.addEventListener('DOMContentLoaded', function () {
     audio.play().catch(() => {
         console.log("Failed to auto-play");
     });
-
+    let unlocked = false;
     const unlockAudio = () => {
+        if (unlocked) return;
+        unlocked = true;
         audio.muted = false;
         audio.play().catch(() => {});
         console.log("Music unmuted!");
-        document.removeEventListener('click', unlockAudio);
-        document.removeEventListener('keydown', unlockAudio);
-        document.removeEventListener('scroll', unlockAudio);
     };
 
     document.addEventListener('click', unlockAudio);
