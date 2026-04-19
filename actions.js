@@ -245,3 +245,45 @@ $(function () {
 
   initPlayer();
 });
+
+const itemsPerPage = 3;
+let currentPage = 1;
+let items = [];
+let totalPages = 0;
+let prevBtn, nextBtn, pageInfo;
+document.addEventListener("DOMContentLoaded", () => {
+    items = document.querySelectorAll(".project-item");
+    console.log("items found:", items.length);
+    totalPages = Math.ceil(items.length / itemsPerPage);
+    prevBtn = document.getElementById("prevBtn");
+    nextBtn = document.getElementById("nextBtn");
+    pageInfo = document.getElementById("pageInfo");
+    prevBtn.onclick = () => render(currentPage - 1);
+    nextBtn.onclick = () => render(currentPage + 1);
+    render(1);
+});
+
+function render(page) {
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    currentPage = page;
+    items.forEach(item => item.classList.add("hidden"));
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    setTimeout(() => {
+        for (let i = start; i < end; i++) {
+            if (items[i]) {
+                setTimeout(() => {
+                    items[i].classList.remove("hidden");
+                }, (i - start) * 50);
+            }
+        }
+    }, 150);
+    if (pageInfo) {
+        pageInfo.textContent = `${page} / ${totalPages}`;
+    }
+    if (prevBtn && nextBtn) {
+        prevBtn.disabled = page === 1;
+        nextBtn.disabled = page === totalPages;
+    }
+}

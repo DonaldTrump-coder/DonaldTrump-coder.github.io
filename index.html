@@ -34,7 +34,7 @@
 
     <div id="player-content">
       <div id="album-art">
-        <img src="https://singhimalaya.github.io/Codepen/assets/img/album-arts/1.jpg" class="active" id="_1" />
+        <img src="./images/songs/Alwayswithme.jpg" class="active" id="_1" />
         <div id="buffer-box">Buffering ...</div>
       </div>
 
@@ -91,11 +91,11 @@
                     <span class="tooltip">GitHub</span>
                 </a>
                 <a href="Wechat.html" target="_blank">
-                    <img src="images/Wechat.jpg">
+                    <img src="images/Wechat.png">
                     <span class="tooltip">WeChat</span>
                 </a>
-                <a href="https://www.kaggle.com/donaldtrump2025" target="_blank">
-                    <img src="images/kaggle.jpg">
+                <a href="https://www.modelscope.cn/profile/Donald123456" target="_blank">
+                    <img src="images/modelscope.png">
                     <span class="tooltip">ModelScope</span>
                 </a>
             </div>
@@ -149,194 +149,296 @@
             </p>
         </div>
     </div>
-
     </section>
 
-    </section>
-    <section id="recent-work" style="display: flex;
-                                            flex-direction: column;
-                                            justify-content: center; 
-                                            align-items: center; 
-                                            gap: 50px;">
-    <h2 style="text-align: center;
-               font-family: STSong;
-               font-size: 1.9em;
-               color: #333;
-               margin-bottom: 0%;">
-        近期工作
-    </h2>
-    <h3 style="text-align: center;
-               font-family: STSong;
-               font-size: 1.4em;
-               color: #333;
-               margin-top: -2.2em;
-               margin-bottom: -1em;">
-        Recent Work
-    </h3>
-    <a href="mapswithdrone/index.html" target="_blank" onmouseover="this.style.color='rgb(93, 92, 92)';" onmouseout="this.style.color='black';" style="color: rgb(0, 0, 0);">
-    <div style="display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1.5em;">
-        <div>
-            <img src="mapswithdrone/images/星湖杯.png" style="width: 12em;">
+    <section id="recent" class="education">
+        <h2 class="title">🗃️ Recent Work</h2>
+
+    <div id="project-container">
+
+    <div class="pagination">
+        <button id="prevBtn" class="page-btn">
+            <img src="./images/tools/prev.png" alt="prev" class="icon-img">
+        </button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn" class="page-btn">
+            <img src="./images/tools/next.png" alt="next" class="icon-img">
+        </button>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/informative.png" alt="project image">
         </div>
-        <div style="display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    max-width: 25em;
-                    text-align: left;">
-            <p>
-                Thematic Atlas of the Low-Altitude Economy Industry in the Greater Bay Area
+        <div class="project-content">
+            <p class="project-title-en">
+            🛠️ Informative Scene-Reconstruction App: LLM Scene Reconstructor
             </p>
-            <p>
-                粤港澳大湾区低空经济产业专题图集
+            <p class="project-date">
+            03 / 2026
             </p>
-            <p>
-                09 / 2025
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Jingran Zhang, Siyuan Zou
             </p>
-            <p>
-                <strong>Haojun Tang</strong>, Hui Dao, Lifen Yao, Wenfeng Bu
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/Informative-Scene-Reconstruction-App/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/Informative-Scene-Reconstruction-App" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.youtube.com/watch?v=kMFJSooMu10" target="_blank">
+                    <img src="./images/tools/video.png" alt="icon" class="link-icon" />
+                    [Video]
+                </a>
             </p>
         </div>
     </div>
-    </a>
 
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/Fastview.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🛠️ FastViewGener: Fast Overviews Generator for Large Satellite Images
+            </p>
+            <p class="project-date">
+            02 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Yuyang Wu, Jiahao Zhou, Hongbo Pan
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/FastViewGen/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/FastViewGen" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.modelscope.cn/datasets/Donald123456/LargeSatelliteImgs" target="_blank">
+                    <img src="./images/tools/data.png" alt="icon" class="link-icon" />
+                    [Data]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="mapswithdrone/images/星湖杯.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🗺️ Thematic Atlas of the Low-Altitude Economy Industry in the Greater Bay Area
+            </p>
+            <p class="project-date">
+            09 / 2025
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Hui Dao, Lifen Yao, Wenfeng Bu, Baoyi Zhang
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/mapswithdrone" target="_blank">
+                    <img src="./images/tools/map.png" alt="icon" class="link-icon" />
+                    [Atlas Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="./images/星湖杯2025.jpg" target="_blank">
+                    <img src="./images/tools/awards.png" alt="icon" class="link-icon" />
+                    [Awards]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    </div>
     </section>
 
-    <section class="awards">
-        <h2>
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            荣誉及奖项
-        </h2>
-        <h3>
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            Awards
-        </h3>
+    <section id="patent" class="education">
+        <h2 class="title">📜 Publications</h2>
+        <div class="awards-container">
 
-        <div style="position:relative;
-            ">
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-
-            <a href="award14.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                10/2025 &ensp; 第二届“星湖杯”地图设计大赛 一等奖
-            </a>
-
-            <a href="award10.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                08/2025 &ensp; 全国大学生测绘学科创新创业智能大赛 特等奖
-            </a>
-
-            <a href="award11.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                08/2025 &ensp; 第八届湖南省大学生测绘综合技能大赛 一等奖
-            </a>
-
-            <a href="award9.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                06/2025 &ensp; 中南大学第十七届大学生测绘学科创新创业智能大赛 一等奖
-            </a>
-
-            <a href="award8.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                06/2025 &ensp; 中南大学第十七届大学生测绘学科创新创业智能大赛 二等奖
-            </a>
-
-            <a href="award7.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                05/2025 &ensp; 第十六届蓝桥杯全国软件和信息技术专业人才大赛湖南赛区 三等奖
-            </a>
-
-            <a href="award6.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                04/2025 &ensp; 第二届高分对地观测应用技术创新大赛 三等奖
-            </a>
-
-            <a href="award12.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                &ensp; 中南大学第十九届“升华杯”大学生课外学术科技作品竞赛 三等奖
-            </a>
-
-            <a href="award5.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                01/2025 &ensp; Interdisciplinary Contest In Modeling&ensp;&ensp;Honorable Mention
-            </a>
-
-            <a href="award4.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                12/2024 &ensp; 2023-2024学年本专科生国家奖学金
-            </a>
-
-            <a href="award3.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                12/2024 &ensp; 中南大学2023-2024学年奖学金 一等奖
-            </a>
-
-            <a href="award13.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                &ensp; 中南大学2023-2024学年优秀学生
-            </a>
-
-            <a href="award2.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                07/2024 &ensp; APMCM亚太地区大学生数学建模竞赛（中文赛项） 三等奖
-            </a>
-
-            <a href="award1.html" target="_blank" style="text-decoration: none;">
-                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-                <br>
-                06/2024 &ensp; 中南大学第十六届大学生测绘学科创新创业智能大赛 一等奖
+            <a target="_blank" class="award-item" onclick="event.preventDefault();">
+                <div class="award-text">
+                    <p>GSSA: Gaussian Surfels with Spatial Awareness for Surface Reconstruction
+                    </p>
+                    <p>
+                    <strong>Haojun Tang</strong>, Siyuan Zou, Hongbo Pan, Yixin Lu, Shun Zhou
+                    </p>
+                    <p class="award-date">Underview</p>
+                </div>
             </a>
 
         </div>
-
     </section>
 
-    <section class="academic">
-        <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-        <h2>
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            学术能力
-        </h2>
-        <h3>
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            Academic Work
-        </h3>
+    <section id="patent" class="education">
+        <h2 class="title">📑 Patents</h2>
+        <div class="awards-container">
 
-        <a href="academic-work3.html" target="_blank" style="text-decoration: none;">
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            <br>
-            06/2025 &ensp;CET-6 &ensp;616
-        </a>
+            <a target="_blank" class="award-item" onclick="event.preventDefault();">
+                <div class="award-text">
+                    <p>Method and System for Mesh Reconstruction based on Spatial Features of Gaussian Surfels Model.
+                    </p>
+                    <p>
+                    Siyuan Zou, <strong>Haojun Tang</strong>, Hongbo Pan
+                    </p>
+                    <p class="award-date">Pending for Chinese Invention Patent</p>
+                </div>
+            </a>
 
-        <a href="academic-work2.html" target="_blank" style="text-decoration: none;">
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            <br>
-            03/2024 &ensp;全国计算机等级考试 &ensp;二级
-        </a>
+            <a target="_blank" class="award-item" onclick="event.preventDefault();">
+                <div class="award-text">
+                    <p>Fast View Generation System Based on Panchromatic and Multispectral Remote Sensing
+                    </p>
+                    <p>
+                    <strong>Haojun Tang</strong>, Yuyang Wu, Jiahao Zhou
+                    </p>
+                    <p class="award-date">Pending for Software copyright (China)</p>
+                </div>
+            </a>
 
-        <a href="academic-work1.html" target="_blank" style="text-decoration: none;">
-            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
-            <br>
-            12/2023 &ensp;普通话水平测试 &ensp;二级甲等
-        </a>
-
+        </div>
     </section>
 
+    <section id="awards" class="education">
+        <h2 class="title">🏆 Individual Awards</h2>
+        <div class="awards-container">
+
+            <a href="./images/星湖杯2025.jpg" target="_blank" class="award-item">
+                <div class="award-date">10/2025</div>
+                <div class="award-text">
+                    <strong>First Prize</strong> in the 2<sup>nd</sup> Xinghu Cup Map Design Competition
+                </div>
+            </a>
+
+            <a href="./files/程序设计-特等奖.pdf" target="_blank" class="award-item">
+                <div class="award-date">08/2025</div>
+                <div class="award-text">
+                    <strong style="color: red;">National Grand Prize</strong> in the College Students' Surveying and Mapping Discipline Innovation and Entrepreneurship Intelligent Competition
+                </div>
+            </a>
+
+            <a href="./images/省赛一等奖.png" target="_blank" class="award-item">
+                <div class="award-date">08/2025</div>
+                <div class="award-text">
+                    <strong>First Prize</strong> in the 8<sup>th</sup> College Students' Surveying and Mapping Skills Competition of Hunan Province
+                </div>
+            </a>
+
+            <a href="./images/高分观测第二届.jpg" target="_blank" class="award-item">
+                <div class="award-date">04/2025</div>
+                <div class="award-text">
+                    <strong>Third Prize</strong> in the 2<sup>nd</sup> High-Resolution Earth Observation Application Technology Innovation Competition
+                </div>
+            </a>
+
+            <a href="./images/美赛.png" target="_blank" class="award-item">
+                <div class="award-date">01/2025</div>
+                <div class="award-text">
+                    <strong>Honorable Mention</strong> in Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling (MCM/ICM)
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="honors" class="education">
+        <h2 class="title">🏅 Honors and Sholarships</h2>
+        <div class="awards-container">
+
+            <a href="" target="_blank" class="award-item">
+                <div class="award-date">2024-2025</div>
+                <div class="award-text" style="color: red;">
+                    <strong>National Scholarship for Chinese Undergraduate Students</strong>
+                </div>
+            </a>
+
+            <a href="" target="_blank" class="award-item">
+                <div class="award-date">2024-2025</div>
+                <div class="award-text">
+                    <strong>First-Class</strong> Academic Scholarship of Central South University
+                </div>
+            </a>
+
+            <a href="./images/国家奖学金2023.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text" style="color: red;">
+                    <strong>National Scholarship for Chinese Undergraduate Students</strong>
+                </div>
+            </a>
+
+            <a href="./images/一等奖学金2023.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text">
+                    <strong>First-Class</strong> Academic Scholarship of Central South University
+                </div>
+            </a>
+
+            <a href="./images/优秀学生.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text">
+                    <strong>Outstanding Student</strong> of Central South University
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="service" class="education">
+        <h2 class="title">📢 Services and Social Work</h2>
+        <div class="awards-container">
+
+        </div>
+    </section>
+
+    <section id="friends" class="education">
+        <h2 class="title">🤜🤛 Friends and Collaborators</h2>
+        <div class="friends-grid">
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/xinyufu.jpg" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://xinyu-fu.com/" target="_blank" class="link-friends">Xinyu Fu ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | SCUT</p>
+                <p>Computational Neuroscience, Brain-inspired AI</p>
+            </div>
+            </div>
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/beijiahuang.png" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://breadicecream.github.io/" target="_blank" class="link-friends">Beijia Huang ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | CSU</p>
+                <p>Java Development, AI Application Development</p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--
     <section class="social-work">
         <h2>
             <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
@@ -381,10 +483,10 @@
             </a>
 
         </div>
-    </section>
+    </section>-->
 
     <footer>
-        <p>&copy; 2025 [�������]������Ȩ�������</p>
+        <p>Copyright &copy; 2026 Haojun Tang. All rights reserved.</p>
     </footer>
 </body>
 </html>
