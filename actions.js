@@ -22,4 +22,7 @@ const unlockAudio = () => {
 };
 document.addEventListener('click', unlockAudio, { once: true });
 document.addEventListener('keydown', unlockAudio, { once: true });
-document.addEventListener('scroll', unlockAudio, { once: true });
+
+window.onload = function() {
+    document.querySelector('body').click();
+};
