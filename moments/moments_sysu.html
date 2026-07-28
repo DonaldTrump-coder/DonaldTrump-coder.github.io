@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #eaf7fe, #a6e8fe);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            pointer-events: none;
+        }
+
+        .status-dot {
+            width: 0.625rem;
+            height: 0.625rem;
+            border-radius: 50%;
+            background: #4caf50;
+            box-shadow: 0 0 0.375rem rgba(76,175,80,0.5);
+            transition: all 0.4s;
+        }
+
+        .status-dot.paused {
+            background: #ff9800;
+            box-shadow: 0 0 0.375rem rgba(255,152,0,0.5);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vw;
+            padding: 1.25vw;
+            max-width: 40vw;
+            margin: 0 auto 2.5vw;
+            flex: 1;
+        }
+
+        .gallery-item {
+            width: 100%;
+            background: #fff;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 0.375rem 1.25rem rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+
+        .gallery-item .caption {
+            padding: 0.8rem 1rem;
+            text-align: center;
+            font-family: STSong, serif;
+            font-size: 1rem;
+            color: #555;
+            background: #f9fdff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: linear-gradient(to bottom, #a6e8fe, #297eff);
+            color: #fffc50;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="status-bar">
+        <div class="status-dot" id="statusDot" title="绿色=自动播放 / 橙色=暂停"></div>
+    </div>
+
+    <section class="gallery" id="gallery">
+        <div class="gallery-item">
+            <img src="../images/moments/zhuhai_summer/moments1.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/moments/zhuhai_summer/moments2.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/moments/zhuhai_summer/moments3.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/中山暑期学校2026.jpg" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Gallery of Haojun Tang</p>
+    </footer>
+
+    <script>
+        (function () {
+            const SPEED = 0.5;
+            const RESUME_DELAY = 10000;
+
+            const statusDot = document.getElementById('statusDot');
+
+            let autoPlaying = true;
+            let rafId = null;
+            let resumeTimer = null;
+
+            function setPaused(paused) {
+                autoPlaying = !paused;
+                statusDot.classList.toggle('paused', paused);
+                if (paused) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                } else {
+                    scrollLoop();
+                }
+            }
+
+            function scrollLoop() {
+                if (!autoPlaying) return;
+
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const atBottom = window.scrollY >= maxScroll - 1;
+
+                if (!atBottom) {
+                    window.scrollBy({ top: SPEED, behavior: 'instant' });
+                }
+
+                rafId = requestAnimationFrame(scrollLoop);
+            }
+
+            window.addEventListener('wheel', () => {
+                if (autoPlaying) setPaused(true);
+                if (resumeTimer) clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(() => setPaused(false), RESUME_DELAY);
+            }, { passive: true });
+
+            window.addEventListener('touchmove', () => {
+                if (autoPlaying) setPaused(true);
+                if (resumeTimer) clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(() => setPaused(false), RESUME_DELAY);
+            }, { passive: true });
+
+            scrollLoop();
+        })();
+    </script>
+</body>
+</html>

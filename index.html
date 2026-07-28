@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage of Haojun Tang</title>
+    <meta name="author" content="Haojun Tang">
+    <meta name="keywords" content="Homepage">
+    <meta name="description" content="Homepage of Haojun Tang">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./actions.js"></script>
+</head>
+
+<div id="player-container">
+  <div id="player">
+    <div id="player-track">
+      <div id="album-name"></div>
+      <div id="track-name"></div>
+      <div id="track-time">
+        <div id="current-time"></div>
+        <div id="track-length"></div>
+      </div>
+      <div id="seek-bar-container">
+        <div id="seek-time"></div>
+        <div id="s-hover"></div>
+        <div id="seek-bar"></div>
+      </div>
+    </div>
+
+    <div id="player-content">
+      <div id="album-art">
+        <img src="./images/songs/Alwayswithme.jpg" class="active" id="_1" />
+        <img src="./images/songs/openthedoor.jpg" id="_2" />
+        <img src="./images/songs/Seeyouagain.jpg" id="_3" />
+        <img src="./images/songs/Bleedinglove.jpg" id="_4" />
+        <img src="./images/songs/Highway.jpg" id="_5" />
+        <img src="./images/songs/Backto12.jpg" id="_6" />
+        <img src="./images/songs/Thetruth.png" id="_7" />
+        <img src="./images/songs/Croatian.png" id="_8" />
+        <img src="./images/songs/rememberoursummer.jpg" id="_9" />
+        <img src="./images/songs/allfallsdown.jpg" id="_10" />
+        <img src="./images/songs/lovestory.jpg" id="_11" />
+        <div id="buffer-box">Buffering ...</div>
+      </div>
+
+      <div id="player-controls">
+        <div class="control">
+          <div class="button" id="play-previous"><i class="fas fa-backward"></i></div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-pause-button"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-next"><i class="fas fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<body>
+
+    <header id="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#education">Experiences</a></li>
+                <li><a href="#recent">Recent Work</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#patent">Patents</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#honors">Honors</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#friends">Friends</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+    <div class="hero-container">
+        <div class="visitor-map">
+            <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=fa9a41&w=300&t=tt&d=L8-oSWqg843TqjKNorzHuXsqDTYBq9VXvkb6Wd30cHE&co=f5f5f5&ct=000000&cmo=82002f&cmn=69edff'>
+            </script>
+            <p class="map-title">Visitor Map</p>
+        </div>
+
+        <div class="hero-left">
+            <h1>Haojun Tang</h1>
+            <p class="nickname">Allen Donald</p>
+
+            <p class="school">
+                Central South University<br>
+                <em>School of Geosciences and Info-Physics</em>
+            </p>
+
+            <p class="major">
+                Remote Sensing Science and Technology · Undergraduate
+            </p>
+
+            <div class="icons">
+                <a href="https://space.bilibili.com/517540581?" target="_blank">
+                    <img src="images/bilibili.png">
+                    <span class="tooltip">BiliBili</span>
+                </a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAABDiKTc8VstML-pDRVhsMe4ypElFccc-v63YLn6QYQdw?" target="_blank">
+                    <img src="images/tiktok.png">
+                    <span class="tooltip">Douyin</span>
+                </a>
+                <a href="https://github.com/DonaldTrump-coder" target="_blank">
+                    <img src="images/github.jpg">
+                    <span class="tooltip">GitHub</span>
+                </a>
+                <a href="Wechat.html" target="_blank">
+                    <img src="images/Wechat.png">
+                    <span class="tooltip">WeChat</span>
+                </a>
+                <a href="https://www.modelscope.cn/profile/Donald123456" target="_blank">
+                    <img src="images/modelscope.png">
+                    <span class="tooltip">ModelScope</span>
+                </a>
+            </div>
+
+            <div class="contact">
+                <p>📞 +86 13480603751</p>
+                <p>✉️ tlangpu695@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="images/person_image.png" alt="profile">
+            <img src="images/life.png" alt="profile">
+        </div>
+
+    </div>
+</section>
+
+    <section id="introduction" class="introduction">
+    <h2 class="title">📑 Brief Introduction</h2>
+    <p class="description">
+        Hi! I'm an undergraduate student studying in the 
+        <a href="https://gip.csu.edu.cn/" class="highlight" target="_blank">School of Geosciences and Info-Physics</a> of 
+        <a href="https://www.csu.edu.cn/" class="highlight" target="_blank">Central South University</a>, majoring in Remote Sensing Science and Technology. My research interest is in 
+        <span class="research">🔬3D Vision for Photogrammetry</span>, <span class="research">🔬Vision-Language Navigation for UAVs</span>, <span class="research">🔬RS Foundation Model</span>. I've been conducting research under the supervision of Prof. Chao Tao (CSU), Dr. Siyuan Zou (CSU) and Dr. Jianping Li (NTU). I'm actively seeking for <span style="background: yellow;">internships in embodied AI</span> and <span style="background: yellow;">2027 fall Ph.D opportunities</span>.
+        <br>📌 <span style="color: red; font-family: 'Georgia'; font-style: italic;">I'm always open to new ideas and collaborations! You can reach me through email or any of my social media accounts.</span>
+
+    </p>
+    </section>
+
+    <section id="education" class="education">
+        <h2 class="title">🎓 Education and Experiences</h2>
+    <div class="edu-list">
+
+    <div class="edu-item">
+        <div class="edu-icon">
+        <img src="images/selfevolving.png" alt="education icon" />
+        </div>
+
+        <div class="edu-content">
+            <p class="schoolname">
+                Self-Evolving Technology (Changsha) Co., Ltd.
+            </p>
+            <p class="eduinfo">
+                📍 Changsha, China
+            </p>
+            <p class="eduinfo">
+                🧑‍💼 Intern, Robotics Development with Embodied AI
+            </p>
+            <p class="eduinfo">
+                🕐 Jul. 2026 - Present
+            </p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-icon">
+        <img src="images/SYSU.png" alt="education icon" />
+        </div>
+
+        <div class="edu-content">
+            <p class="schoolname">
+                "Space-Air-Ground-Sea Intelligent Sensing Technology"<br> Summer School, Sun Yat-Sen University
+            </p>
+            <p class="eduinfo">
+                📍 Zhuhai, China
+            </p>
+            <p class="eduinfo">
+                🧑‍🎓 Participant
+            </p>
+            <p class="eduinfo">
+                🕐 Jul. 2026 
+            </p>
+            <p class="eduinfo">
+                🎥 <a href="./moments/moments_sysu.html" target="_blank" style="color: #5a08ff;" onmouseover="this.style.color='#808080'" onmouseout="this.style.color='#5a08ff'">[moments]</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-icon">
+        <img src="images/CSU.png" alt="education icon" />
+        </div>
+
+        <div class="edu-content">
+            <p class="schoolname">
+                Central South University
+            </p>
+            <p class="eduinfo">
+                📍 Changsha, China
+            </p>
+            <p class="eduinfo">
+                🧑‍🎓 Undergraduate, Remote Sensing Science and Technology
+            </p>
+            <p class="eduinfo">
+                🕐 Sep. 2023 - Present
+            </p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-icon">
+        <img src="images/sz.png" alt="education icon" />
+        </div>
+
+        <div class="edu-content">
+            <p class="schoolname">
+                Shenzhen Middle School
+            </p>
+            <p class="eduinfo">
+                📍 Shenzhen, China
+            </p>
+            <p class="eduinfo">
+                🧑‍🎓 High School Student
+            </p>
+            <p class="eduinfo">
+                🕐 Sep. 2020 - Jun. 2023
+            </p>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+    <section id="recent" class="education">
+        <h2 class="title">🗃️ Recent Work</h2>
+
+    <div id="project-container">
+
+    <div class="pagination">
+        <button id="prevBtn" class="page-btn">
+            <img src="./images/tools/prev.png" alt="prev" class="icon-img">
+        </button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn" class="page-btn">
+            <img src="./images/tools/next.png" alt="next" class="icon-img">
+        </button>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/GSSA.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            📃 GSSA: Gaussian Surfels with Spatial Awareness for Surface Reconstruction
+            </p>
+            <p class="project-date">
+            07 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Siyuan Zou, Hongbo Pan, Yixin Lu, Shun Zhou
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/GSSA/static/paper.pdf" target="_blank">
+                    <img src="./images/tools/paper.png" alt="icon" class="link-icon" />
+                    [Paper]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://donaldtrump-coder.github.io/GSSA/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/GSSA" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/CropSuitability.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🗺️ Climate Suitability of Major Crop Distribution and Agricultural-Pastoral Zoning in China
+            </p>
+            <p class="project-date">
+            07 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/china-crop-climatic-suitability/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/china-crop-climatic-suitability" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.modelscope.cn/datasets/Donald123456/ChinaAgroEco" target="_blank">
+                    <img src="./images/tools/data.png" alt="icon" class="link-icon" />
+                    [Data]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/GLSMEI.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🛠️ G-LSMEI: GPU-Accelerated Least-Square Matching Refiner for Epipolar Image Pairs
+            </p>
+            <p class="project-date">
+            06 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Jiahao Zhou
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/G-LSMEI/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/G-LSMEI" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://pypi.org/project/glsmei/" target="_blank">
+                    <img src="./images/tools/pypi.png" alt="icon" class="link-icon" />
+                    [PyPI Package]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/informative.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🛠️ Informative Scene-Reconstruction App: Scene Reconstructor with Guidance Agent
+            </p>
+            <p class="project-date">
+            03 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Jingran Zhang, Siyuan Zou
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/Informative-Scene-Reconstruction-App/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/Informative-Scene-Reconstruction-App" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.youtube.com/watch?v=epEAVYEmF5M" target="_blank">
+                    <img src="./images/tools/video.png" alt="icon" class="link-icon" />
+                    [Video]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="./images/Fastview.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🛠️ FastViewGener: Fast Overviews Generator for Large Satellite Images
+            </p>
+            <p class="project-date">
+            02 / 2026
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Yuyang Wu, Jiahao Zhou, Hongbo Pan
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/FastViewGen/" target="_blank">
+                    <img src="./images/tools/project.png" alt="icon" class="link-icon" />
+                    [Project Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/DonaldTrump-coder/FastViewGen" target="_blank">
+                    <img src="./images/github.jpg" alt="icon" class="link-icon" />
+                    [Code]
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.modelscope.cn/datasets/Donald123456/LargeSatelliteImgs" target="_blank">
+                    <img src="./images/tools/data.png" alt="icon" class="link-icon" />
+                    [Data]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-image">
+            <img src="mapswithdrone/images/星湖杯.png" alt="project image">
+        </div>
+        <div class="project-content">
+            <p class="project-title-en">
+            🗺️ Thematic Atlas of the Low-Altitude Economy Industry in the Greater Bay Area
+            </p>
+            <p class="project-date">
+            09 / 2025
+            </p>
+            <p class="project-authors">
+            <strong>Haojun Tang</strong>, Hui Dao, Lifen Yao, Wenfeng Bu, Baoyi Zhang
+            </p>
+            <p class="project-links">
+                <a href="https://donaldtrump-coder.github.io/mapswithdrone" target="_blank">
+                    <img src="./images/tools/map.png" alt="icon" class="link-icon" />
+                    [Atlas Page]
+                </a>
+                &nbsp;&nbsp;
+                <a href="./images/星湖杯2025.jpg" target="_blank">
+                    <img src="./images/tools/awards.png" alt="icon" class="link-icon" />
+                    [Awards]
+                </a>
+            </p>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+    <section id="publications" class="education">
+        <h2 class="title">📜 Publications</h2>
+        <div class="awards-container">
+
+            <div class="award-item">
+                <div class="award-text">
+                    <p>GSSA: Gaussian Surfels with Spatial Awareness for Surface Reconstruction
+                    </p>
+                    <p>
+                    <strong>Haojun Tang</strong>, Siyuan Zou<sup>*</sup>, Hongbo Pan, Yixin Lu, Shun Zhou
+                    </p>
+                    <p class="award-date"><span class="tag-journal">[Journal]</span> Remote Sensing, 2026 &nbsp;&nbsp;&nbsp;&nbsp; [<a href="https://donaldtrump-coder.github.io/GSSA/static/paper.pdf" target="_blank">PDF</a>]</p>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-text">
+                    <p>Image-assisted aerial LiDAR completion with morphology-guided gaussian splatting
+                    </p>
+                    <p>
+                    Siyuan Zou, Yongjun Zhang, Zhiwei Li, Hongbo Pan<sup>*</sup>, Xinyi Liu, <strong>Haojun Tang</strong>, Hai Kan
+                    </p>
+                    <p class="award-date"><span class="tag-conf">[Poster Presentation]</span> XXV ISPRS Congress 2026 &nbsp;&nbsp;&nbsp;&nbsp; [<a href="./files/papers/2026001.pdf" target="_blank">PDF</a>]
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="patent" class="education">
+        <h2 class="title">📑 Patents</h2>
+        <div class="awards-container">
+
+            <div class="award-item">
+                <div class="award-text">
+                    <p>Method and System for Mesh Reconstruction based on Spatial Features of Gaussian Surfels Model.
+                    </p>
+                    <p>
+                    <!--Siyuan Zou-->***, <strong>Haojun Tang</strong>, ***<!--Hongbo Pan-->
+                    </p>
+                    <p class="award-date">Pending for Chinese Invention Patent</p>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-text">
+                    <p>Fast View Generation System Based on Panchromatic and Multispectral Remote Sensing
+                    </p>
+                    <p>
+                    <strong>Haojun Tang</strong>, ***, ***<!--Yuyang Wu, Jiahao Zhou-->
+                    </p>
+                    <p class="award-date">Pending for Software copyright (China)</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="awards" class="education">
+        <h2 class="title">🏆 Individual Awards</h2>
+        <div class="awards-container">
+
+            <a href="./images/星湖杯2025.jpg" target="_blank" class="award-item">
+                <div class="award-date">10/2025</div>
+                <div class="award-text">
+                    <strong>First Prize</strong> in the 2<sup>nd</sup> Xinghu Cup Map Design Competition
+                </div>
+            </a>
+
+            <a href="./files/程序设计-特等奖.pdf" target="_blank" class="award-item">
+                <div class="award-date">08/2025</div>
+                <div class="award-text">
+                    <strong style="color: red;">National Grand Prize</strong> in the College Students' Surveying and Mapping Discipline Innovation and Entrepreneurship Intelligent Competition
+                </div>
+            </a>
+
+            <a href="./images/省赛一等奖.png" target="_blank" class="award-item">
+                <div class="award-date">08/2025</div>
+                <div class="award-text">
+                    <strong>First Prize</strong> in the 8<sup>th</sup> College Students' Surveying and Mapping Skills Competition of Hunan Province
+                </div>
+            </a>
+
+            <a href="./images/高分观测第二届.jpg" target="_blank" class="award-item">
+                <div class="award-date">04/2025</div>
+                <div class="award-text">
+                    <strong>Third Prize</strong> in the 2<sup>nd</sup> High-Resolution Earth Observation Application Technology Innovation Competition
+                </div>
+            </a>
+
+            <a href="./images/美赛.png" target="_blank" class="award-item">
+                <div class="award-date">01/2025</div>
+                <div class="award-text">
+                    <strong>Honorable Mention</strong> in Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling (MCM/ICM)
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="honors" class="education">
+        <h2 class="title">🏅 Honors and Sholarships</h2>
+        <div class="awards-container">
+
+            <a href="./images/国家奖学金2024.jpg" target="_blank" class="award-item">
+                <div class="award-date">2024-2025</div>
+                <div class="award-text" style="color: red;">
+                    <strong>National Scholarship for Chinese Undergraduate Students</strong>
+                </div>
+            </a>
+
+            <a href="./images/一等奖学金2024.jpg" target="_blank" class="award-item">
+                <div class="award-date">2024-2025</div>
+                <div class="award-text">
+                    <strong>First-Class</strong> Academic Scholarship of Central South University
+                </div>
+            </a>
+
+            <a href="./images/国家奖学金2023.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text" style="color: red;">
+                    <strong>National Scholarship for Chinese Undergraduate Students</strong>
+                </div>
+            </a>
+
+            <a href="./images/一等奖学金2023.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text">
+                    <strong>First-Class</strong> Academic Scholarship of Central South University
+                </div>
+            </a>
+
+            <a href="./images/优秀学生.jpg" target="_blank" class="award-item">
+                <div class="award-date">2023-2024</div>
+                <div class="award-text">
+                    <strong>Outstanding Student</strong> of Central South University
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="service" class="education">
+        <h2 class="title">📢 Services and Social Work</h2>
+        <div class="awards-container">
+
+            <a href="./images/班导师助理.jpg" target="_blank" class="award-item">
+                <div class="award-date">2025-2026</div>
+                <div class="award-text">
+                    <strong>Undergraduate Class-Mentor Assistant</strong> at School of Geosciences and Info-Physics, Central South University
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="friends" class="education">
+        <h2 class="title">🤜🤛 Friends and Collaborators</h2>
+        <div class="friends-grid">
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/xinyufu.jpg" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://xinyu-fu.com/" target="_blank" class="link-friends">Xinyu Fu ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | SCUT</p>
+                <p>BCI Foundation Model,<br> Computational Neuroscience,<br> Brain-inspired AI</p>
+            </div>
+            </div>
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/beijiahuang.png" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://breadicecream.github.io/" target="_blank" class="link-friends">Beijia Huang ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | CSU</p>
+                <p>Java Development,<br> AI Application Development</p>
+            </div>
+            </div>
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/beiningxu.png" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://xubeining.github.io/" target="_blank" class="link-friends">Beining Xu ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | MSU-BIT</p>
+                <p>AI Security,<br> Binary Security</p>
+            </div>
+            </div>
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/yizhezhang.jpg" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://yizhezhang0418.github.io/" target="_blank" class="link-friends">Yizhe Zhang ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Master's Student | WHU</p>
+                <p>Robotics,<br> SLAM and Reconstruction</p>
+            </div>
+            </div>
+
+            <div class="friend-item">
+                <div class="friend-top">
+                <img src="./images/friends/yuyangwu.jpg" alt="avatar">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <a href="https://csuyuyangwu.github.io/home/" target="_blank" class="link-friends">Yuyang Wu ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-desc">
+                <p>Undergraduate | CSU</p>
+                <p>VLMs,<br> Computer Vision,<br> Photogrammetry</p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--
+    <section class="social-work">
+        <h2>
+            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+            社会工作
+        </h2>
+        <h3>
+            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+            Social Work
+        </h3>
+        <div style="position:relative;
+                ">
+            <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+
+            <a href="social-work5.html" target="_blank" style="text-decoration: none;">
+                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+                <br>
+                03/2025 &ensp;中国湖南省长沙市 &ensp;岳麓街道云麓园社区志愿服务 &ensp;5h
+            </a>
+
+            <a href="social-work4.html" target="_blank" style="text-decoration: none;">
+                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+                <br>
+                03/2025 &ensp;中国湖南省长沙市 &ensp;中南大学地信院“志愿辅学讲解”志愿服务 &ensp;4h
+            </a>
+
+            <a href="social-work3.html" target="_blank" style="text-decoration: none;">
+                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+                <br>
+                09/2024 &ensp;中国湖南省长沙市 &ensp;中南大学2024年迎新志愿服务 &ensp;6h
+            </a>
+
+            <a href="social-work2.html" target="_blank" style="text-decoration: none;">
+                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+                <br>
+                07/2024 &ensp;中国湖南省 &ensp;“湖南青马在线”大学生青年马克思主义者培训结业
+            </a>
+
+            <a href="social-work1.html" target="_blank" style="text-decoration: none;">
+                <span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>
+                <br>
+                05/2024 &ensp;中国湖南省长沙市 &ensp;云麓园社区垃圾分类志愿服务 &ensp;2h
+            </a>
+
+        </div>
+    </section>-->
+
+    <footer>
+        <p>Copyright &copy; 2026 Haojun Tang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
