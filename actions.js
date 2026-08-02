@@ -51,6 +51,9 @@ $(function () {
     "Remember Our Summer",
     "All Falls Down",
     "Love Story",
+    "Set Fire to the Rain",
+    "Fearless",
+    "Traveling light",
   ];
   const albums = [
     "千と千尋の神隠し サウンドトラック",
@@ -64,8 +67,11 @@ $(function () {
     "Remember Our Summer",
     "Different World",
     "Fearless",
+    "21",
+    "Fearless",
+    "What If it is",
   ];
-  const albumArtworks = ["_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "_9", "_10", "_11",];
+  const albumArtworks = ["_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "_9", "_10", "_11", "_12", "_13", "_14",];
   const trackUrl = [
     "./music/bgsound.mp3",
     "./music/Through You.mp3",
@@ -78,6 +84,9 @@ $(function () {
     "./music/Remember Our Summer.mp3",
     "./music/All Falls Down.mp3",
     "./music/Love Story.mp3",
+    "./music/Set Fire to the Rain.mp3",
+    "./music/Fearless.mp3",
+    "./music/Traveling Light.mp3",
   ];
 
   let bgArtworkUrl,
