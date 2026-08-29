@@ -66,37 +66,6 @@
   </div>
 </div>
 
-<script>
-    const repository = 'DonaldTrump-coder/DonaldTrump-coder.github.io';
-    const updateTimeElement = document.getElementById('update-time');
-
-    fetch(`https://api.github.com/repos/${repository}/commits?per_page=1`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch update time');
-            }
-            return response.json();
-        })
-        .then(commits => {
-            const commitDate = commits[0].commit.committer.date;
-
-            updateTimeElement.textContent = new Date(commitDate).toLocaleString(
-                'en-US',
-                {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                }
-            );
-        })
-        .catch(() => {
-            updateTimeElement.textContent = 'Unavailable';
-        });
-</script>
-
-
 <body>
 
     <header id="navbar">
@@ -792,5 +761,56 @@
             Last updated: <span id="update-time">Loading...</span>
         </p>
     </footer>
+
+    <script>
+    const repository = 'DonaldTrump-coder/DonaldTrump-coder.github.io';
+    const updateTimeElement = document.getElementById('update-time');
+
+    if (updateTimeElement) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        fetch(`https://api.github.com/repos/${repository}/commits?per_page=1`, {
+            headers: {
+                Accept: 'application/vnd.github+json'
+            },
+            signal: controller.signal
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status}`);
+                }
+
+                return response.json();
+            })
+            .then(commits => {
+                if (!Array.isArray(commits) || commits.length === 0) {
+                    throw new Error('No commits found');
+                }
+
+                const commitDate = commits[0]?.commit?.committer?.date;
+                const date = new Date(commitDate);
+
+                if (!commitDate || Number.isNaN(date.getTime())) {
+                    throw new Error('Invalid commit date');
+                }
+
+                updateTimeElement.textContent = date.toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            })
+            .catch(() => {
+                updateTimeElement.textContent = 'Unavailable';
+            })
+            .finally(() => {
+                clearTimeout(timeoutId);
+            });
+    }
+</script>
+
 </body>
 </html>
