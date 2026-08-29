@@ -1071,3 +1071,10 @@ a:hover {
 
 .tag-journal { color: #297eff; font-weight: bold; }
 .tag-conf   { color: #ff2406; font-weight: bold; }
+
+.update-time {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: normal;
+    opacity: 0.85;
+}
