@@ -1078,3 +1078,12 @@ a:hover {
     font-weight: normal;
     opacity: 0.85;
 }
+
+.professor-link,
+.professor-link:link,
+.professor-link:visited {
+    color: #085aff;
+}
+.professor-link:hover {
+    color: #808080;
+}
